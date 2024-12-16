@@ -1,6 +1,6 @@
 import artificialBreastForm from "./artificalBreastForm.jpg";
 import botulinumToxinTypeA from "./botulinum.jpeg";
-import hyaluronicAcidFiller from "./hyaluronicAcid.jpeg";
+import hyaluronicAcidFiller from "./HyaluronicAcid.jpeg";
 import lypolysis from "./lypolysis.jpg";
 import pdoCog from "./PDOCog.jpg";
 import pdoMonoScrew from "./pdoMonoScrew.jpg";
