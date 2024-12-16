@@ -44,6 +44,16 @@ const router = createBrowserRouter([
         // ] 
       },
       {
+        path: "Equipments",
+        element: <ProductsPage productType={"Equipments"}/>,
+        // children: [
+        //   {
+        //     path: 'Devices/product/:prodID',
+        //     element: <ProductView/>
+        //   }
+        // ] 
+      },
+      {
         path: "product/:prodID",
         element : <ProductView/>
       },

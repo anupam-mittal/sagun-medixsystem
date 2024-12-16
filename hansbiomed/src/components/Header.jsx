@@ -36,17 +36,20 @@ export default function Header() {
       </NavLink>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex flex-row w-2/3 justify-between py-6 pr-6">
+      <div className="hidden md:flex flex-row w-10/12 justify-between py-6 pr-6">
         <NavLink to="/Biologics" className="hover:text-[#C4F1BE]">
           Biologics
         </NavLink>
         <NavLink to="/Devices" className="hover:text-[#C4F1BE]">
           Medical Devices
         </NavLink>
+        <NavLink to="/Equipments" className="hover:text-[#C4F1BE]">
+          Equipments
+        </NavLink>
         <NavLink to="/PR" className="hover:text-[#C4F1BE]">
           PR
         </NavLink>
-        <Link to="/#scrollSection" className="hover:text-[#C4F1BE] ml-40">
+        <Link to="/#scrollSection" className="hover:text-[#C4F1BE] ">
           About Us
         </Link>
       </div>
@@ -99,6 +102,13 @@ export default function Header() {
             Medical Devices
           </NavLink>
           <NavLink
+            to="/Equipments"
+            className="py-2 hover:text-[#C4F1BE]"
+            onClick={() => setMenuOpen(false)}
+          >
+            Equipments
+          </NavLink>
+          <NavLink
             to="/PR"
             className="py-2 hover:text-[#C4F1BE]"
             onClick={() => setMenuOpen(false)}
@@ -116,30 +126,4 @@ export default function Header() {
       )}
     </div>
   );
-  // return (
-  //   <>
-  //     <div className={`flex flex-row justify-between w-full  text-center items-center fixed h-16  top-0 left-0 z-50
-  //       ${scrolled ? "bg-white border-b-2 border-b-gray-400" : "bg-transparent"}`}>
-  //       <NavLink to="/" className="h-full w-1/10 pl-6">
-  //         <img src={logo} alt="img here" className="w-full h-full" />
-  //       </NavLink>
-
-  //       <div className="flex flex-row w-2/5 justify-between py-6">
-  //         <NavLink to="Biologics" href="" className="hover:text-yellow-100">
-  //           Biologics
-  //         </NavLink>
-  //         <NavLink to="Devices" href="" className="hover:text-yellow-100">
-  //           Medical Devices
-  //         </NavLink>
-  //         <NavLink to="PR" href="" className="hover:text-yellow-100">
-  //           PR
-  //         </NavLink>
-  //         {/* <div className="hover:text-yellow-100">biologics</div> */}
-  //         {/* <div className="hover:text-yellow-100">medical devices</div> */}
-  //       </div>
-
-  //       <Link to="/#scrollSection" className="pr-6">About us</Link>
-  //     </div>
-  //   </>
-  // );
 }
