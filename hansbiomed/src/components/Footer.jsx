@@ -19,6 +19,9 @@ export default function Footer() {
             <NavLink className="text-gray-600 hover:text-gray-800" to='/Devices'>Medical Devices</NavLink>
             </li>
             <li>
+            <NavLink className="text-gray-600 hover:text-gray-800" to='/Equipments'>Equipments</NavLink>
+            </li>
+            <li>
             <NavLink className="text-gray-600 hover:text-gray-800" to='/PR'>PR</NavLink>
             </li>
             <li>

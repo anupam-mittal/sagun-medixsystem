@@ -1,11 +1,8 @@
-import noseImplant from "../noseImplant.jpeg";
-import chinImplant from "../chinImplant.jpeg";
-import cheekImplant from "../cheekImplant.jpeg";
-import siliconeBreastImplant from "../siliconeBreastImplant.jpeg";
-import tissueExpander from "../tissueExpander.jpeg";               
-
 import { cosmoprofHK, cosmoprofItaly, cosmoprofLA, cosmoprofMumbai, incosmeticsFrance, medicaGermany } from "../images/PREvents/import";
 import { artificialBreastForm, botulinumToxinTypeA,lypolysis, hyaluronicAcidFiller,pdoCog,pdoMonoScrew,skinBooster } from "../images/Biologics/import";
+import { chinImplant, cheekImplant, noseImplant, siliconeBreastImplant, tissueExpander } from "../images/MedicalDevices/import";
+import { activo, aromaGrand, aromaGrandCheveux, hipro, hiproL, hiproQ, hiproV,noableLaser, pentagonGSlim, pentagonGlassF, pentagonGrand, tinea } from "../images/Equipments/import";
+
 const productTypeToPageMapping = {
   Biologics: [
     "Biologics",
@@ -260,7 +257,7 @@ const productTypeToPageMapping = {
           "What is Q-Switched Nd:YAG Laser ?" : "The Q-Switched Nd:YAG Laser method with short pulse width and low energy used for removal of pigment demonstrated better treatment effects than other conventional treatment methods. This treatment method is a new concept that can be described as selective photo rejuvenation with minimal thermal damage and inflammation reaction to affected tissues by pigmentation.",
 
         },
-        img: siliconeBreastImplant,
+        img: activo,
         category: "Skin",
       },
       {
@@ -283,7 +280,7 @@ const productTypeToPageMapping = {
             "Repetition Rate : 1 ~ 10 [Hz]", "Input Voltage	: 200-240 [VAC], 50/60 [Hz]", "Dimension : 480 x 640 x 1,230 [mm] (W x D x H)", "Weight :	67 [kg]",
           ],
         },
-        img: siliconeBreastImplant,
+        img: aromaGrand,
         category: "Skin",
       },
       {
@@ -306,7 +303,7 @@ const productTypeToPageMapping = {
             "Repetition Rate : 1 ~ 10 [Hz]", "Input Voltage	: 110/220 [VAC], 50/60 [Hz]", "Dimension : 420 X 510 X 1,040 [mm] (W x D x H)", "Weight :	50 [kg]",
           ],
         },
-        img: siliconeBreastImplant,
+        img: aromaGrandCheveux,
         category: "Skin",
       },
       {
@@ -330,7 +327,7 @@ const productTypeToPageMapping = {
             "Cartridge E (13.0mm, Optional)	: 10,000 Shots", "Dimension :	HIPRO - 430 x 570 x 1,050 [mm], HIPRO-S - 340 x 380 x 270 [mm] (W x D x H)", "Weight : HIPRO : 40 [kg], HIPRO-S : 7 [kg]",
           ],
         },
-        img: siliconeBreastImplant,
+        img: hipro,
         category: "Skin",
       },
       {
@@ -355,7 +352,7 @@ const productTypeToPageMapping = {
             "Depth(BODY) : 6.0 ~ 13.0 [mm]"
           ],
         },
-        img: siliconeBreastImplant,
+        img: hiproV,
         category: "Skin",
       },
       {
@@ -370,7 +367,7 @@ const productTypeToPageMapping = {
             "Hand Piece time : 2,000 [min]", "Input Voltage : 100-230 [VAC], 50/60 [Hz]", "Dimension : 260 x 310 x 175 [mm] (W x D x H)", "Weight : 3.5 [kg]",
           ],
         },
-        img: siliconeBreastImplant,
+        img: hiproQ,
         category: "Skin",
       },
       {
@@ -384,7 +381,7 @@ const productTypeToPageMapping = {
             "Input Voltage : 100-240 [VAC], 50/60 [Hz]", "Dimension : 350 x 412 x 255 [mm] (W x D x H)", "Weight : 5 [kg]",
           ],
         },
-        img: siliconeBreastImplant,
+        img: hiproL,
         category: "Skin",
       },
       {
@@ -412,7 +409,7 @@ const productTypeToPageMapping = {
             "Laser Delivery : 7Joint Articulated Arm", "Input Voltage : 200 ~ 240 [VAC], 50/60 [Hz]", "Weight : 62 [kg]", "Dimension : 450 x 510 x 1,150 [mm] (W x D x H)",
           ],
         },
-        img: siliconeBreastImplant,
+        img: pentagonGrand,
         category: "Skin",
       },
       {
@@ -444,7 +441,7 @@ const productTypeToPageMapping = {
             "High Peak Power", "Fine Beam Quality", "Powerful and Rapid Treatment", "Less Pain", "Fractional Laser, Continues Wave, Ultra Pulse Mode", "Two Type Shapes in Fractional Laser",
           ],
         },
-        img: siliconeBreastImplant,
+        img: pentagonGlassF,
         category: "Skin",
       },
       {
@@ -471,7 +468,7 @@ const productTypeToPageMapping = {
             "High Peak Power", "Fine Beam Quality", "Less Pain", "Continues Wave, Ultra Pulse Mode", 
           ],
         },
-        img: siliconeBreastImplant,
+        img: pentagonGSlim,
         category: "Skin",
       },
       {
@@ -493,7 +490,7 @@ const productTypeToPageMapping = {
             "405 [nm] Wavelength : Removal the onychomycrosis by killing fungus", "635 [nm] Wavelength : Activating the blood circulation cell regeneration and immunity for delaminating germ",
           ]
         },
-        img: siliconeBreastImplant,
+        img: tinea,
         category: "Skin",
       },
       {
@@ -519,7 +516,7 @@ const productTypeToPageMapping = {
             "Luxurious Design", "Spot Size Change without Changing Lens", "DCD Cooling Method", "Can be Operated by Hand piece GUI",
           ],
         },
-        img: siliconeBreastImplant,
+        img: noableLaser,
         category: "Skin",
       },
     ]
