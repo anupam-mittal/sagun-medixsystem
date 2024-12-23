@@ -23,33 +23,52 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  });
+
   return (
     <div
-      className={`flex flex-row justify-between items-center w-full fixed h-16 top-0 left-0 z-50 ${
+      className={`flex justify-between items-center w-full fixed h-16 top-0 left-0 z-50 ${
         scrolled ? "bg-white border-b-2 border-b-gray-400" : "bg-transparent"
       }`}
     >
       {/* Logo Section */}
-      <NavLink to="/" className="h-full w-1/10 pl-6">
-        <img src={logo} alt="Logo" className="w-full h-full" />
+      <NavLink to="/" className="h-full flex items-center pl-6">
+        <img src={logo} alt="Logo" className="h-full" />
       </NavLink>
 
       {/* Desktop Links */}
-      <div className="hidden md:flex flex-row w-10/12 justify-between py-6 pr-6">
-        <NavLink to="/Biologics" className="hover:text-[#C4F1BE]">
+      <div className="hidden md:flex flex-row w-10/12 justify-between items-center py-6 pr-6">
+        <NavLink
+          to="/Biologics"
+          className="relative hover:text-[#4CAF50] before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-0.5 before:bg-[#4CAF50] hover:before:w-full transition-all duration-1000"
+        >
           Biologics
         </NavLink>
-        <NavLink to="/Devices" className="hover:text-[#C4F1BE]">
+
+        <NavLink
+          to="/Devices"
+          className="relative hover:text-[#4CAF50] before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-0.5 before:bg-[#4CAF50] hover:before:w-full transition-all duration-1000"
+        >
           Medical Devices
         </NavLink>
-        <NavLink to="/Equipments" className="hover:text-[#C4F1BE]">
+
+        <NavLink
+          to="/Equipments"
+          className="relative hover:text-[#4CAF50] before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-0.5 before:bg-[#4CAF50] hover:before:w-full transition-all duration-1000"
+        >
           Equipments
         </NavLink>
-        <NavLink to="/PR" className="hover:text-[#C4F1BE]">
+
+        <NavLink
+          to="/PR"
+          className="relative hover:text-[#4CAF50] before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-0.5 before:bg-[#4CAF50] hover:before:w-full transition-all duration-1000"
+        >
           PR
         </NavLink>
-        <Link to="/#scrollSection" className="hover:text-[#C4F1BE] ">
+        <Link
+          to="/#scrollSection"
+          className="hover:text-[black] hover:bg-[white] bg-black text-white px-4 py-2 rounded-full transition-all duration-1000"
+        >
           About Us
         </Link>
       </div>

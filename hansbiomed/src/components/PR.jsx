@@ -1,8 +1,10 @@
 import React from "react";
 import { PREvents } from "../assets/constants/constant.js";
+import HeaderPages from "./HeaderPages.jsx";
+import { PRBanner } from "../assets/images/PageBanners/import.js";
 
 export default function PR({ productType = "Biologics" }) {
-  const pageTitle = "Public Relations";
+  const pageTitle = "Events and Exhibition Attended";
 
   // Map through the product list and create product components
   const productComp = PREvents.map((event, idx) => {
@@ -34,16 +36,29 @@ export default function PR({ productType = "Biologics" }) {
   });
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="mt-28"></div>
+    <>
+    <HeaderPages/>
+    <div className="">
+        {/* Image Banner */} 
+        <div className="relative w-full">
+          <img
+            src={PRBanner} 
+            alt="Banner"
+            className="w-full h-56 object-cover"
+          />
+          <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 text-center">
+            <h1 className="inline-block px-6 py-2 font-bannerHeading lg:text-8xl md:text-7xl text-4xl text-black font-extrabold">
+              {pageTitle}
+            </h1>
+          </div>
+        </div>
 
-      {/* Page Title */}
-      <h1 className="text-3xl font-bold text-center mt-8 mb-6">{pageTitle}</h1>
-
-      {/* Responsive Product List */}
-      <div className="grid px-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:px-32 md:px-16">
+        {/* Product List */}
+        <div className="grid px-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 lg:px-32 md:px-16 mt-20">
         {productComp}
       </div>
-    </div>
+      </div>
+    </>
   );
 }
+

@@ -9,10 +9,10 @@ import bestMain from "../assets/bestMain.png";
 import trustMain from "../assets/trustMain.png";
 import growthMain from "../assets/growthMain.png";
 
-import slider1 from "../assets/images/carousel/1og.png";
-import slider2 from "../assets/images/carousel/2og.png";
-import slider3 from "../assets/images/carousel/3og.png";
-import slider4 from "../assets/images/carousel/4og.png";
+import slider1 from "../assets/images/carousel/carousel1.png";
+import slider2 from "../assets/images/carousel/carousel2.png";
+import slider3 from "../assets/images/carousel/carousel3.png";
+import slider4 from "../assets/images/carousel/carousel4.png";
 
 import { useLocation } from "react-router-dom";
 
@@ -59,81 +59,72 @@ const section2Items = [
   },
 ];
 
-function Carousel() {
-  const [slideIndex, setSlideIndex] = useState(1);
 
-  const slides = [
-    { id: 1, src: slider1, caption: "Enhancing Beauty, Inspiring Confidence" },
-    { id: 2, src: slider2, caption: "Your Trusted Partner in Aesthetic Solutions" },
-    { id: 3, src: slider3, caption: "Where Innovation Meets Elegance" },
-    { id: 4, src: slider4, caption: "Elevating Your Beauty, One Product at a Time" },
+const Carousel = () => {
+  const slides = [slider1, slider2, slider3, slider4];
+  const captions = [
+    "Enhance Your Natural Beauty",
+    "Glow from Within",
+    "Sculpt Your Dream Body",
+    "Define Your Facial Features",
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Function to move to the next slide
   const nextSlide = () => {
-    setSlideIndex((prev) => (prev === slides.length ? 1 : prev + 1));
+    setCurrentIndex((currentIndex + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    setSlideIndex((prev) => (prev === 1 ? slides.length : prev - 1));
-  };
-
-  const setCurrentSlide = (index) => {
-    setSlideIndex(index);
-  };
-
+  // useEffect to set up automatic slide change every 3 seconds
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000);
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(nextSlide, 3000); // 3 seconds
+    return () => clearInterval(interval); // Cleanup on component unmount
+  }, [currentIndex]);
 
   return (
-    <div className="relative overflow-hidden w-full  mx-auto bg-black h-screen">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`${
-            slideIndex === index + 1 ? "block" : "hidden"
-          } transition-opacity duration-1000 ease-in-out`}
-        >
-          <img
-            src={slide.src}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute bottom-36 left-16 bg-opacity-50  p-4 w-96 text-huge font-extrabold font-caveat text-black ">
-            {slide.caption}
+    <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-full">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            <img
+              src={slide}
+              alt={`Slide ${index + 1}`}
+              className={`w-full h-full object-cover ${
+                index === 3 ? 'object-right' : 'object-left'
+              }`}
+            />
+            <div
+              className={`absolute top-1/2 transform -translate-y-1/2 text-black text-5xl font-semibold font-bannerHeading ${
+                index === 3 ? 'left-1 lg:left-36' : 'right-1 lg:right-36'
+              }`}
+            >
+              {captions[index]}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      {/* Navigation Buttons */}
-      <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-2xl font-bold p-4 hover:bg-black bg-opacity-50 rounded-r hover:bg-opacity-70"
-        onClick={prevSlide}
-      >
-        ❮
-      </button>
-      <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-2xl font-bold p-4 hover:bg-black bg-opacity-50 rounded-l hover:bg-opacity-70"
-        onClick={nextSlide}
-      >
-        ❯
-      </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute bottom-4 w-full flex justify-center z-10">
         {slides.map((_, index) => (
           <span
             key={index}
-            className={`w-4 h-4 rounded-full cursor-pointer ${
-              slideIndex === index + 1 ? "bg-white" : "bg-gray-400"
+            onClick={() => setCurrentIndex(index)}
+            className={`w-3 h-3 mx-1 rounded-full cursor-pointer ${
+              index === currentIndex ? 'bg-white' : 'bg-gray-400'
             }`}
-            onClick={() => setCurrentSlide(index + 1)}
           ></span>
         ))}
       </div>
     </div>
   );
-}
+};
+
 
 export default function Main() {
   const location = useLocation();
@@ -186,13 +177,14 @@ export default function Main() {
 
   return (
     <>
+    <Header/>
       <Carousel />
       <div
         id="scrollSection"
-        className="flex flex-col-reverse lg:flex-row mt-40 text-center items-center lg:h-28 justify-center px-10 py-20 lg:p-40"
+        className="flex flex-col-reverse lg:flex-row mt-36 text-center items-center lg:h-28 justify-center px-10 py-20 lg:p-40"
       >
         {/* Content Section */}
-        <div className="w-full lg:w-1/2 px-4">
+        <div className="w-full lg:w-1/2 px-4 pt-10">
           <p className=" text-lg sm:text-xl lg:text-2xl font-light text-left">
             Established in the year 2011, We, Sagun Medixsystem OPC Pvt. Ltd.
             are most trader and supplier of wide series of Surgical Products. We

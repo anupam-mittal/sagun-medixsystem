@@ -1,12 +1,13 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { productTypeToPageMapping } from "../assets/constants/constant.js";
+import HeaderPages from "./HeaderPages.jsx";
 
 export default function ProductsPage({ productType }) {
   const pageTitle = productTypeToPageMapping[productType][0];
   const pageProductList = productTypeToPageMapping[productType][2];
+  const pageBanner = productTypeToPageMapping[productType][1];
   const navigate = useNavigate();
 
   const handleProductClick = (id) => {
@@ -29,15 +30,29 @@ export default function ProductsPage({ productType }) {
   });
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="mt-28"></div>
-      {/* Page Title */}
-      <h1 className="text-3xl font-bold text-center mt-8 mb-6">{pageTitle}</h1>
+    <>
+      <HeaderPages />
+      <div className="">
+        {/* Image Banner */} 
+        <div className="relative w-full">
+          <img
+            src={pageBanner} 
+            alt="Banner"
+            className="w-full h-56 object-cover"
+          />
+          <div className="absolute bottom-0 left-0 right-0 translate-y-1/2 text-center">
+            <h1 className="inline-block px-6 py-2 font-bannerHeading lg:text-8xl md:text-7xl text-5xl text-black font-extrabold">
+              {pageTitle}
+            </h1>
+          </div>
+        </div>
 
-      {/* Product List */}
-      <div className="grid px-20 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-28 md:px-8 ">
-        {productComp}
+        {/* Product List */}
+        <div className="grid px-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:px-28 md:px-8 mt-28">
+          {productComp}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
+

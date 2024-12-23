@@ -10,6 +10,7 @@ module.exports = {
         sans: ['Poppins', 'sans-serif'], // Replace 'Inter' with your desired font
         gallient: ['Gallient', 'sans-serif'],
         caveat : ['Caveat', 'sans-serif'],
+        bannerHeading : ["BannerHeadingFont", "sans-serif"],
       },
       fontSize :{
         "huge" : ['5rem', '1'],

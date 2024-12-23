@@ -2,11 +2,12 @@ import { cosmoprofHK, cosmoprofItaly, cosmoprofLA, cosmoprofMumbai, incosmeticsF
 import { artificialBreastForm, botulinumToxinTypeA,lypolysis, hyaluronicAcidFiller,pdoCog,pdoMonoScrew,skinBooster } from "../images/Biologics/import";
 import { chinImplant, cheekImplant, noseImplant, siliconeBreastImplant, tissueExpander } from "../images/MedicalDevices/import";
 import { activo, aromaGrand, aromaGrandCheveux, hipro, hiproL, hiproQ, hiproV,noableLaser, pentagonGSlim, pentagonGlassF, pentagonGrand, tinea } from "../images/Equipments/import";
+import { BiologicsBanner, MedicalDevicesBanner, PRBanner, EquipmentsBanner } from "../images/PageBanners/import";
 
 const productTypeToPageMapping = {
   Biologics: [
     "Biologics",
-    ["All", "Bone", "Skin"],
+    BiologicsBanner,
     [
       {
         id: 1,
@@ -135,13 +136,7 @@ const productTypeToPageMapping = {
   ],
   Devices: [
     "Medical Device",
-    [
-      "All",
-      "Silicone Implant",
-      "Threads",
-      "Hair Transplanter",
-      "Scar Management",
-    ],
+    MedicalDevicesBanner,
     [
       {
         id: 1,
@@ -235,7 +230,7 @@ const productTypeToPageMapping = {
   ],
   Equipments : [
     "Equipments",
-    [/*Filter*/],
+    EquipmentsBanner,
     [
       {
         id: 1,

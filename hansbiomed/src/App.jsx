@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className='flex flex-col justify-between min-h-screen'>
-      <Header/>
+      {/* <Header/> */}
     {/* <Main/> */}
     {/* <div className='mt-24'></div> */}
     {/* <ProductsPage productType={"Device"}/> */}
